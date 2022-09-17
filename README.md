@@ -1,11 +1,16 @@
 # instant-nerf-note
 Test Project link: https://github.com/NVlabs/instant-ngp
 
-## Useful Command
+## Useful Commands
 
 ### Use Colmap
 ```bash
 python3 scripts/colmap2nerf.py --colmap_matcher exhaustive --run_colmap --aabb_scale 16 --images <data/your-data>
+```
+
+### Training
+```bash
+./build/testbed --scene transforms.json
 ```
 
 ### Rendering a video
