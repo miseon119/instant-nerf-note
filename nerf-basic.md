@@ -1,0 +1,5 @@
+# What is a NeRF?
+
+- One thing you may find surprising about NeRFs: although they learn directly from image data, they use neither convolutional nor transformer layers (at least not the original). An understated benefit of NeRFs is compression; at 5–10MB, the weights of a NeRF model may be smaller than the collection of images used to train them.
+
+- NeRFs by contrast rely on an old yet elegant concept called light fields, or radiance fields. A light field is a function that describes how light transport occurs throughout a 3D volume. It describes the direction of light rays moving through every x=(x, y, z) coordinate in space and in every direction d, described either as θ and ϕ angles or a unit vector. Collectively they form a 5D feature space that describes light transport in a 3D scene. The NeRF, inspired by this representation, attempts to approximate a function that maps from this space into a 4D space consisting of color c=(R,G,B) and a density σ, which you can think of as the likelihood that the light ray at this 5D coordinate space is terminated (e.g. by occlusion). The standard NeRF is thus a function of the form F : (x,d) -> (c,σ).
