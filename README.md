@@ -1,6 +1,11 @@
 # instant-nerf-note
 Test Project link: https://github.com/NVlabs/instant-ngp
 
+## Build
+```bash
+cmake . -B build -DCMAKE_CUDA_ARCHITECTURES=86 -DCMAKE_CUDA_COMPILER=$(which nvcc)
+```
+
 ## Useful Commands
 
 ### Use Colmap
