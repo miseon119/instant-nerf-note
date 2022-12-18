@@ -7,12 +7,17 @@ cmake . -B build -DCMAKE_CUDA_ARCHITECTURES=86 -DCMAKE_CUDA_COMPILER=$(which nvc
 cmake --build build --config RelWithDebInfo -j
 ```
 
+## Capture image for Instant NeRF
+1. Generation pipeline uses COLMAP to determine camera positions.
+2. train
+
 ## Useful Commands
 
 ### Use Colmap
 ```bash
 python3 scripts/colmap2nerf.py --colmap_matcher exhaustive --run_colmap --aabb_scale 16 --images <data/your-data>
 ```
+
 
 ### Training
 ```bash
