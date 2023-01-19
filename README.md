@@ -29,3 +29,7 @@ python3 scripts/colmap2nerf.py --colmap_matcher exhaustive --run_colmap --aabb_s
 python3 scripts/run.py --scene <yout-transforms.json> --load_snapshot <yout-transforms_base.msgpack> --video_n_seconds <video length> --video_fps 30 --width 1920 --height 1080 --mode nerf --video_camera_path transforms_base_cam.json
 ```
 
+### Load model
+```bash
+python3 scripts/run.py --mode nerf --scene transforms.json --gui
+```
